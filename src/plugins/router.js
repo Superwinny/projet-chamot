@@ -1,10 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../pages/Home.vue'
-import D2 from '../pages/D2.vue'
-import D3 from '../pages/D3.vue'
-import Illustration from '../pages/Illustration.vue'
-import Contact from '../pages/Contact.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../pages/Home.vue';
+import D2 from '../pages/D2.vue';
+import D3 from '../pages/D3.vue';
+import Illustration from '../pages/Illustration.vue';
+import Contact from '../pages/Contact.vue';
+import { paths } from "../libs/defaultValues";
 
 
 
