@@ -1,10 +1,9 @@
 <template>
-  <v-card class="overflow-hidden">
+  <v-card >
     <v-app-bar
       absolute
       color="#6A76AB"
       dark
-      shrink-on-scroll
       prominent
       height="500px"
     >
@@ -21,17 +20,18 @@
           <v-btn icon to="/">
             <v-icon>mdi-home</v-icon>
           </v-btn>
+          <v-btn icon to="/illustration">
+            <v-icon>mdi-image-outline</v-icon>
+          </v-btn>
 
           <v-btn icon to="/d3">
             <v-icon>mdi-video-3d</v-icon>
           </v-btn>
-         
+
           <v-btn icon to="/d2">
             <v-icon>mdi-video-3d-off</v-icon>
           </v-btn>
-          <v-btn icon to="/illustration">
-            <v-icon>mdi-image-outline</v-icon>
-          </v-btn>
+
           <v-btn icon to="/contact">
             <v-icon>mdi-account-box</v-icon>
           </v-btn>
@@ -42,13 +42,13 @@
     <v-sheet
       id="scrolling-techniques-3"
       class="overflow-y-auto"
-      max-height="1000"
+      max-height="500"
     >
-      <v-container style="height: 1000px"></v-container>
+      <v-container style="height: 500px"></v-container>
     </v-sheet>
   </v-card>
 </template>
-Header
+
 
 
 <script>
@@ -75,5 +75,4 @@ export default {};
   width: 100%;
   margin-top: 50px;
 }
-
 </style>
