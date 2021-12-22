@@ -1,18 +1,13 @@
 <template>
-  <v-card >
-    <v-app-bar
-      absolute
-      color="#6A76AB"
-      dark
-      prominent
-      height="500px"
-    >
+  <v-card>
+    <v-app-bar absolute color="#6A76AB" dark prominent height="500px">
       <div class="header">
         <div class="image">
           <img
             height="150"
             width="150"
             src="https://picsum.photos/id/11/500/300"
+            
           />
         </div>
 
@@ -47,12 +42,21 @@
       <v-container style="height: 500px"></v-container>
     </v-sheet>
   </v-card>
+  <!-- Dialogue -->
+  
+
+
+
+
+  
 </template>
 
 
 
 <script>
-export default {};
+export default {
+  
+};
 </script>
 
 <style>
