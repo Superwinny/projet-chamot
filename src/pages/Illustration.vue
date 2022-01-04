@@ -93,14 +93,20 @@
               width="auto"
               @click="showDialog()"
             ></v-img>
+            
           </v-card>
         </v-col>
+     
         <v-col cols="12" md="6" sm="4">
-          
+           <v-card class="mx-auto" max-width="auto">
           <v-card-title> Top western road trips </v-card-title>
 
           <v-card-subtitle> 1,000 miles of wonder </v-card-subtitle>
+          
+          </v-card>
+
         </v-col>
+        
       </template>
     </v-dialog>
   </v-row>
