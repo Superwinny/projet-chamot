@@ -1,13 +1,15 @@
 <template>
-  <v-card>
-    <v-app-bar absolute color="#6A76AB" dark prominent height="500px">
+    <v-app-bar
+        color="#6A76AB"
+        dark
+        :height="this.$route.name === 'Home' ? '500px' : '300px'"
+    >
       <div class="header">
         <div class="image">
           <img
             height="150"
             width="150"
             src="https://picsum.photos/id/11/500/300"
-            
           />
         </div>
 
@@ -33,29 +35,10 @@
         </div>
       </div>
     </v-app-bar>
-
-    <v-sheet
-      id="scrolling-techniques-3"
-      class="overflow-y-auto"
-      max-height="500"
-    >
-      <v-container style="height: 500px"></v-container>
-    </v-sheet>
-  </v-card>
-  <!-- Dialogue -->
-  
-
-
-
-
-  
 </template>
-
-
 
 <script>
 export default {
-  
 };
 </script>
 
@@ -72,7 +55,6 @@ export default {
   border-radius: 50%;
   margin-top: 20px;
 }
-
 .icon {
   justify-content: center;
   display: flex;
