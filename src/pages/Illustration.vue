@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <!-- Ligne une  -->
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="4" class="ligneUne">
         <v-card class="mx-auto" max-width="auto">
           <v-img
               src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -16,7 +16,7 @@
           <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
         </v-card>
       </v-col>
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="4" class="ligneUne">
         <v-card class="mx-auto" max-width="auto">
           <v-img
               src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -29,7 +29,7 @@
           <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
         </v-card>
       </v-col>
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="4" class="ligneUne">
         <v-card class="mx-auto" max-width="auto">
           <v-img
               src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -43,7 +43,7 @@
         </v-card>
       </v-col>
       <!-- Ligne deux -->
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="4" class="ligneDeux">
         <v-card class="mx-auto" max-width="auto">
           <v-img
               src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -56,7 +56,7 @@
           <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
         </v-card>
       </v-col>
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="4" class="ligneDeux">
         <v-card class="mx-auto" max-width="auto">
           <v-img
               src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -69,7 +69,7 @@
           <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
         </v-card>
       </v-col>
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="4" class="ligneDeux">
         <v-card class="mx-auto" max-width="auto">
           <v-img
               src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -85,7 +85,7 @@
 
       <!-- Dialogue -->
 
-      <v-dialog v-model="dialog" max-width="50%">
+      <v-dialog v-model="dialog" max-width="50%"> 
         <v-card max-width="auto">
           <v-card-text>
             <v-container>
@@ -100,7 +100,13 @@
                 <v-col cols="6">
                   <v-card-title> Top western road trips</v-card-title>
                   <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
+                  <v-select class="format"
+                  :items="['A0', 'A1', 'A2', 'A3' , 'A4' , 'A5' ]"
+                  label="Format*"
+                  required
+                ></v-select>
                 </v-col>
+                
               </v-row>
             </v-container>
           </v-card-text>
@@ -129,5 +135,17 @@ export default {
 </script>
 
 <style>
+.ligneUne{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.ligneDeux{
+  margin-bottom: 100px;
+}
+.format{
+  margin: auto;
+}
+
+
 
 </style>
