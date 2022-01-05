@@ -85,7 +85,7 @@
 
       <!-- Dialogue -->
 
-      <v-dialog v-model="dialog" max-width="50%"> 
+      <v-dialog v-model="dialog" max-width="50%">
         <v-card max-width="auto">
           <v-card-text>
             <v-container>
@@ -100,13 +100,18 @@
                 <v-col cols="6">
                   <v-card-title> Top western road trips</v-card-title>
                   <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
-                  <v-select class="format"
-                  :items="['A0', 'A1', 'A2', 'A3' , 'A4' , 'A5' ]"
-                  label="Format*"
-                  required
-                ></v-select>
+                  <v-select
+                      v-model="selectedFormat"
+                      class="format"
+                            :items="format"
+                            item-text="name"
+                            item-value="price"
+                            label="Format*"
+                      return-object
+                            required
+                  ></v-select>
+                  {{selectedFormat && selectedFormat.price}}
                 </v-col>
-                
               </v-row>
             </v-container>
           </v-card-text>
@@ -123,6 +128,14 @@ export default {
   data() {
     return {
       dialog: false,
+      selectedFormat: null,
+      format: [{
+        name: 'A0',
+        price: 1200
+      }, {
+        name: 'A1',
+        price: 1201
+      }]
     };
   },
 
@@ -135,17 +148,18 @@ export default {
 </script>
 
 <style>
-.ligneUne{
+.ligneUne {
   margin-top: 100px;
   margin-bottom: 50px;
 }
-.ligneDeux{
+
+.ligneDeux {
   margin-bottom: 100px;
 }
-.format{
+
+.format {
   margin: auto;
 }
-
 
 
 </style>
