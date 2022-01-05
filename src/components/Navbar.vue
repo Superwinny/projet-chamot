@@ -2,7 +2,7 @@
     <v-app-bar
         color="#6A76AB"
         dark
-        :height="this.$route.name === 'Home' ? '500px' : '300px'"
+        :height="this.$route.name === 'Home' ? '600px' : '250px'"
     >
       <div class="header">
         <div class="image">
@@ -53,7 +53,7 @@ export default {
 }
 .image img {
   border-radius: 50%;
-  margin-top: 20px;
+  
 }
 .icon {
   justify-content: center;

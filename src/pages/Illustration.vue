@@ -5,10 +5,10 @@
       <v-col cols="12" md="4" class="ligneUne">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-              height="250px"
-              width="auto"
-              @click="showDialog()"
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="250px"
+            width="auto"
+            @click="showDialog()"
           ></v-img>
 
           <v-card-title> Top western road trips</v-card-title>
@@ -19,9 +19,9 @@
       <v-col cols="12" md="4" class="ligneUne">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-              height="250px"
-              width="auto"
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="250px"
+            width="auto"
           ></v-img>
 
           <v-card-title> Top western road trips</v-card-title>
@@ -32,9 +32,9 @@
       <v-col cols="12" md="4" class="ligneUne">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-              height="250px"
-              width="auto"
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="250px"
+            width="auto"
           ></v-img>
 
           <v-card-title> Top western road trips</v-card-title>
@@ -46,9 +46,9 @@
       <v-col cols="12" md="4" class="ligneDeux">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-              height="250px"
-              width="auto"
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="250px"
+            width="auto"
           ></v-img>
 
           <v-card-title> Top western road trips</v-card-title>
@@ -59,9 +59,9 @@
       <v-col cols="12" md="4" class="ligneDeux">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-              height="250px"
-              width="auto"
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="250px"
+            width="auto"
           ></v-img>
 
           <v-card-title> Top western road trips</v-card-title>
@@ -72,9 +72,9 @@
       <v-col cols="12" md="4" class="ligneDeux">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-              height="250px"
-              width="auto"
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="250px"
+            width="auto"
           ></v-img>
 
           <v-card-title> Top western road trips</v-card-title>
@@ -92,25 +92,25 @@
               <v-row>
                 <v-col cols="6">
                   <v-img
-                      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                      height="300px"
-                      width="auto"
+                    src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                    height="300px"
+                    width="auto"
                   ></v-img>
                 </v-col>
                 <v-col cols="6">
                   <v-card-title> Top western road trips</v-card-title>
                   <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
                   <v-select
-                      v-model="selectedFormat"
-                      class="format"
-                            :items="format"
-                            item-text="name"
-                            item-value="price"
-                            label="Format*"
-                      return-object
-                            required
+                    v-model="selectedFormat"
+                    class="format"
+                    :items="format"
+                    item-text="name"
+                    item-value="price"
+                    label="Format*"
+                    return-object
+                    required
                   ></v-select>
-                  {{selectedFormat && selectedFormat.price}}
+                  {{ selectedFormat && selectedFormat.price }}
                 </v-col>
               </v-row>
             </v-container>
@@ -122,6 +122,7 @@
 </template>
 
 <script>
+// import listIllustration from "../list.json";
 export default {
   name: "Illustration",
 
@@ -129,13 +130,18 @@ export default {
     return {
       dialog: false,
       selectedFormat: null,
-      format: [{
-        name: 'A0',
-        price: 1200
-      }, {
-        name: 'A1',
-        price: 1201
-      }]
+      //  Liaison de list.json 
+      // list: list.json.listIllustration,
+      format: [
+        {
+          name: "20x20",
+          price: 150,
+        },
+        {
+          name: "30x40",
+          price: 200,
+        },
+      ],
     };
   },
 
@@ -160,6 +166,4 @@ export default {
 .format {
   margin: auto;
 }
-
-
 </style>
