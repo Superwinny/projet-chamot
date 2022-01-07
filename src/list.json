@@ -1,46 +1,52 @@
 {
     "listIllustration": [
         {
+            "nomProjet": "LOL",
+            "id": 0,
+            "description": "",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": [
+"https://fr.wikipedia.org/wiki/Image#/media/Fichier:Image_created_with_a_mobile_phone.png"            ],
+            "imgSecondaire": [
+                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
+                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
+            ]
+        }
+    ],
+    "listD3": [
+        {
             "nomProjet": "",
             "id": 0,
             "description": "",
             "date": "",
             "entreprise": "",
             "format": "",
-            "imgPincipal": [
+            "imgPrincipal": [
                 "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
             ],
             "imgSecondaire": [
                 "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
                 "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
+            ]
+        }
+    ],
+    "listD2": [
+        {
+            "nomProjet": "",
+            "id": 0,
+            "description": "",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": [
+                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
             ],
-            "listD3": [
-                {
-                    "nomProjet": "",
-                    "id": 0,
-                    "description": "",
-                    "date": "",
-                    "entreprise": "",
-                    "format": "",
-                    "imgPincipal": [
-                        "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
-                    ],
-                    "imgSecondaire": [
-                        "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
-                        "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
-                    ],
-                    "listD2": [
-                        {
-                            "nomProjet": "",
-                            "id": 0,
-                            "description": "",
-                            "date": "",
-                            "entreprise": "",
-                            "format": "",
-                            "imgPincipal": [
-                                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
-                            ],
-                            "imgSecondaire": [
-                                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
-                                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
-                            ],
+            "imgSecondaire": [
+                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
+                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
+            ]
+        }
+    ]
+}
