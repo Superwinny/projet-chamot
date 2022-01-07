@@ -7,8 +7,21 @@
             "date": "",
             "entreprise": "",
             "format": "",
-            "imgPrincipal": [
-"https://fr.wikipedia.org/wiki/Image#/media/Fichier:Image_created_with_a_mobile_phone.png"            ],
+            "imgPrincipal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+            "imgSecondaire": [
+                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
+                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
+            ]
+        },
+
+        {
+            "nomProjet": "LOL 2",
+            "id": 1,
+            "description": "",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
             "imgSecondaire": [
                 "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
                 "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"

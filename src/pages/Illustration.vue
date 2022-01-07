@@ -8,119 +8,16 @@
         cols="12"
         md="4"
         class="ligneUne"
-
       >
         <v-card class="mx-auto" max-width="auto">
           <v-img
-            :src="list.imgPrincipal[0]"
+            :src="list.imgPrincipal"
             height="250px"
             width="auto"
             @click="showDialog()"
           ></v-img>
 
           <v-card-title> {{list.nomProjet}}</v-card-title>
-            <v-card-title> {{list.imgPrincipal[0]}}</v-card-title>
-
-          <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
-        </v-card>
-      </v-col>
-      <v-col
-        v-for="(list, index) in listprojet"
-        :key="index"
-        cols="12"
-        md="4"
-        class="ligneUne"
-      >
-        <v-card class="mx-auto" max-width="auto">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="250px"
-            width="auto"
-            @click="showDialog()"
-          ></v-img>
-
-          <v-card-title> Top western road trips</v-card-title>
-
-          <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
-        </v-card>
-      </v-col>
-      <v-col
-        v-for="(list, index) in listprojet"
-        :key="index"
-        cols="12"
-        md="4"
-        class="ligneUne"
-      >
-        <v-card class="mx-auto" max-width="auto">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="250px"
-            width="auto"
-            @click="showDialog()"
-          ></v-img>
-
-          <v-card-title> Top western road trips</v-card-title>
-
-          <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
-        </v-card>
-      </v-col>
-      <!-- Ligne deux -->
-      <v-col
-        v-for="(list, index) in listprojet"
-        :key="index"
-        cols="12"
-        md="4"
-        class="ligneDeux"
-      >
-        <v-card class="mx-auto" max-width="auto">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="250px"
-            width="auto"
-            @click="showDialog()"
-          ></v-img>
-
-          <v-card-title> Top western road trips</v-card-title>
-
-          <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
-        </v-card>
-      </v-col>
-      <v-col
-        v-for="(list, index) in listprojet"
-        :key="index"
-        cols="12"
-        md="4"
-        class="ligneDeux"
-      >
-        <v-card class="mx-auto" max-width="auto">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="250px"
-            width="auto"
-            @click="showDialog()"
-          ></v-img>
-
-          <v-card-title> Top western road trips</v-card-title>
-
-          <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
-        </v-card>
-      </v-col>
-      <v-col
-        v-for="(list, index) in listprojet"
-        :key="index"
-        cols="12"
-        md="4"
-        class="ligneDeux"
-      >
-        <v-card class="mx-auto" max-width="auto">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="250px"
-            width="auto"
-            @click="showDialog()"
-          ></v-img>
-
-          <v-card-title> Top western road trips</v-card-title>
 
           <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
         </v-card>
@@ -165,7 +62,7 @@
 </template>
 
 <script>
-import list from "../list.json";
+import listJson from "../list.json";
 export default {
   name: "Illustration",
 
@@ -175,7 +72,7 @@ export default {
       dialog: false,
       selectedFormat: null,
       //  Liaison de list.json
-      listprojet: list.listIllustration,
+      listprojet: listJson.listIllustration,
       format: [
         {
           name: "20x20",
