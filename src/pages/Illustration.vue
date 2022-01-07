@@ -14,7 +14,7 @@
             :src="list.imgPrincipal"
             height="250px"
             width="auto"
-            @click="showDialog()"
+            @click="selectIllustration(list)"
           ></v-img>
 
           <v-card-title> {{list.nomProjet}}</v-card-title>
@@ -32,13 +32,13 @@
               <v-row>
                 <v-col cols="6">
                   <v-img
-                    src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                    :src="selectedIllustration && selectedIllustration.imgPrincipal"
                     height="300px"
                     width="auto"
                   ></v-img>
                 </v-col>
                 <v-col cols="6">
-                  <v-card-title> Top western road trips</v-card-title>
+                  <v-card-title> {{ selectedIllustration && selectedIllustration.nomProjet }}</v-card-title>
                   <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
                   <v-select
                     v-model="selectedFormat"
@@ -90,6 +90,10 @@ export default {
     showDialog() {
       this.dialog = true;
     },
+    selectIllustration(ill) {
+      this.selectedIllustration = ill
+      this.showDialog()
+    }
   },
 };
 </script>
