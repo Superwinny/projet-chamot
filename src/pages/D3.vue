@@ -1,13 +1,17 @@
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="n in 6" :key="n" class="D3" cols="4">
+      <v-col
+        v-for="(list, index) in listprojet"
+        :key="index"
+        class="D3"
+        cols="4"
+      >
         <v-img
-          :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-          :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+          :src="list.imgPrincipal"
           aspect-ratio="1"
           class="grey lighten-2"
-          @click="showDialog()"
+          @click="selectD3(list)"
         >
         </v-img>
       </v-col>
@@ -19,16 +23,22 @@
         <v-card-text>
           <v-container>
             <v-row>
-              <v-col cols="6">
-                <template>
-                  <v-carousel hide-delimiters>
-                    <v-carousel-item
-                      v-for="(item, i) in items"
-                      :key="i"
-                      :src="item.src"
-                    ></v-carousel-item>
-                  </v-carousel>
-                </template>
+              <v-col cols="12">
+                <v-carousel v-if="selectedD3" hide-delimiters>
+                  <v-carousel-item
+                    v-for="(img, index) in selectedD3.imgSecondaire"
+                    :key="index"
+                    :src="img"
+                    reverse-transition="fade-transition"
+                    transition="fade-transition"
+                    
+                  ></v-carousel-item>
+                </v-carousel>
+              </v-col>
+              <v-col cols="12"  >
+                <v-card-title class="descriptionD3" >
+                  {{ selectedD3 && selectedD3.description }}</v-card-title
+                >
               </v-col>
             </v-row>
           </v-container>
@@ -41,26 +51,15 @@
 
 
 <script>
+import listJson from "../list.json";
 export default {
   name: "D3",
- data() {
+  data() {
     return {
       dialog: false,
-             items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-
+      selectedD3: null,
+      //  Liaison de list.json
+      listprojet: listJson.listD3,
     };
   },
 
@@ -68,13 +67,21 @@ export default {
     showDialog() {
       this.dialog = true;
     },
+    selectD3(d3) {
+      this.selectedD3 = d3;
+      this.showDialog();
+    },
   },
 };
 </script>
 
 <style>
 .D3 {
-  margin-top: 50px;
+  margin-top: 150px;
   margin-bottom: 50px;
 }
+.descriptionD3{
+  margin: auto;
+}
+
 </style>
