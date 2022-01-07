@@ -39,6 +39,19 @@
                 </v-col>
                 <v-col cols="6">
                   <v-card-title> {{ selectedIllustration && selectedIllustration.nomProjet }}</v-card-title>
+                  <v-card-title>
+
+                    <v-carousel v-if="selectedIllustration">
+                      <v-carousel-item
+                          v-for="(img,i) in selectedIllustration.imgSecondaire"
+                          :key="i"
+                          :src="img"
+                          reverse-transition="fade-transition"
+                          transition="fade-transition"
+                      ></v-carousel-item>
+                    </v-carousel>
+
+                  </v-card-title>
                   <v-card-subtitle> 1,000 miles of wonder</v-card-subtitle>
                   <v-select
                     v-model="selectedFormat"
