@@ -1,64 +1,57 @@
 <template>
-    <v-app-bar
-        color="#6A76AB"
-        dark
-        :height="this.$route.name === 'Home' ? '600px' : '250px'"
-    >
-      <div class="header">
-        <div class="image">
+  <v-app-bar
+      class="indigo lighten-1 white--text text-center"
+      dense
+      dark
+      :height="this.$route.name === 'Home' ? '600px' : '250px'"
+      app
+  >
+    <v-container>
+      <v-row align="center"
+             justify="center"
+             class="text-center">
+        <v-col cols="12">
           <img
-            height="150"
-            width="150"
-            src="https://picsum.photos/id/11/500/300"
+              class="rounded-image"
+              height="150"
+              width="150"
+              src="https://picsum.photos/id/11/500/300"
           />
-        </div>
-
-        <div class="icon">
+        </v-col>
+      </v-row>
+      <v-row align="center"
+             justify="center"
+             class="text-center">
+        <v-col cols="12">
           <v-btn icon to="/">
             <v-icon>mdi-home</v-icon>
           </v-btn>
           <v-btn icon to="/illustration">
             <v-icon>mdi-image-outline</v-icon>
           </v-btn>
-
           <v-btn icon to="/d3">
             <v-icon>mdi-video-3d</v-icon>
           </v-btn>
-
           <v-btn icon to="/d2">
             <v-icon>mdi-video-3d-off</v-icon>
           </v-btn>
-
           <v-btn icon to="/contact">
             <v-icon>mdi-account-box</v-icon>
           </v-btn>
-        </div>
-      </div>
-    </v-app-bar>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app-bar>
 </template>
 
 <script>
 export default {
+  name: "Navbar"
 };
 </script>
 
 <style>
-.header {
-  width: 100%;
-}
-.image {
-  justify-content: center;
-  display: flex;
-  width: 100%;
-}
-.image img {
+.rounded-image {
   border-radius: 50%;
-  
-}
-.icon {
-  justify-content: center;
-  display: flex;
-  width: 100%;
-  margin-top: 50px;
 }
 </style>

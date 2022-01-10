@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <div>
     <v-row>
-      <v-col cols="12" md="4" class="home">
+      <v-col cols="12" md="4">
         <v-card class="mx-auto" max-width="auto">
           <v-img
             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -22,7 +22,7 @@
         </v-card> 
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -32,8 +32,4 @@ export default {
 };
 </script>
 <style>
-.home {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
 </style>

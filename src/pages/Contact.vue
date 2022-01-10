@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <div>
     <v-row>
-      <v-col cols="12" md="5" class="ContactForm">
+      <v-col cols="12" md="5">
         <v-form ref="form" v-model="valid" lazy-validation>
           <v-text-field
             v-model="name"
@@ -66,7 +66,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -109,7 +109,5 @@ export default {
 </script>
 
 <style>
-.ContactForm {
-  margin-top: 500px;
-}
+
 </style>

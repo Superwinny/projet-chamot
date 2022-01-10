@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div>
     <v-row>
       <!-- Ligne une  -->
       <v-col
@@ -7,7 +7,6 @@
         :key="index"
         cols="12"
         md="4"
-        class="ligneUne"
       >
         <v-card class="mx-auto" max-width="auto">
           <v-img
@@ -117,7 +116,7 @@
         </v-card>
       </v-dialog>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -186,14 +185,7 @@ export default {
 </script>
 
 <style>
-.ligneUne {
-  margin-top: 300px;
-  margin-bottom: 50px;
-}
 
-.ligneDeux {
-  margin-bottom: 100px;
-}
 
 .format {
   margin: auto;
