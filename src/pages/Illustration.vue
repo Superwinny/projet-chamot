@@ -1,13 +1,8 @@
 <template>
-  <div>
+  <div class="margin">
     <v-row>
       <!-- Ligne une  -->
-      <v-col
-        v-for="(list, index) in listprojet"
-        :key="index"
-        cols="12"
-        md="4"
-      >
+      <v-col v-for="(list, index) in listprojet" :key="index" cols="12" md="4">
         <v-card class="mx-auto" max-width="auto">
           <v-img
             :src="list.imgPrincipal"
@@ -22,7 +17,7 @@
         </v-card>
       </v-col>
 
-      <!-- Dialogue -->
+      <!-- Dialog -->
 
       <v-dialog v-model="dialog" max-width="50%">
         <v-card max-width="auto">
@@ -105,8 +100,6 @@
                     >
                       Validate
                     </v-btn>
-
-                    
                   </v-form>
                 </v-col>
                 <v-col cols="1"> </v-col>
@@ -115,12 +108,27 @@
           </v-card-text>
         </v-card>
       </v-dialog>
+
+      <!-- error dialog-->
+      <v-dialog v-model="showMessageError" width="600px">
+        <v-card>
+          <v-card-text>Error</v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="error" class="mr-4" @click="hideDialogError()">
+              Close
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-row>
   </div>
 </template>
 
 <script>
 import listJson from "../list.json";
+import IllustrationService from "../services/illustrationService.js";
+
 export default {
   name: "Illustration",
 
@@ -128,20 +136,12 @@ export default {
     return {
       valid: true,
       name: "",
-      nameRules: [
-        (v) => !!v || "Name is required",
-        (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
-      ],
+      nameRules: [(v) => !!v || "Name is required"],
       lastname: "",
-      lastnameRules: [
-        (v) => !!v || "Name is required",
-        (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
-      ],
+      lastnameRules: [(v) => !!v || "Name is required"],
       email: "",
-      emailRules: [
-        (v) => !!v || "E-mail is required",
-        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-      ],
+      emailRules: [(v) => !!v || "E-mail is required"],
+      showMessageError: false,
       select: null,
       checkbox: false,
       selectedIllustration: null,
@@ -159,12 +159,15 @@ export default {
           price: 200,
         },
       ],
+      form: {
+        name: null,
+        lastname: null,
+        email: null,
+      },
     };
   },
 
   methods: {
-   
-    
     showDialog() {
       this.dialog = true;
     },
@@ -172,39 +175,54 @@ export default {
       this.selectedIllustration = ill;
       this.showDialog();
     },
-     validate() {
+    validate() {
       this.$refs.form.validate();
     },
+    hideDialog() {
+      this.insertDialog = false;
+      this.form = {
+        name: null,
+        lastname: null,
+        email: null,
+      };
+      this.$refs.form.reset();
+    },
+     // Dialog pour les ereurs services
+    hideDialogError() {
+      this.showMessageError = false;
+    },
+      // Dialog pour les ereurs services
+    showDialogError() {
+      this.showMessageError = true;
+    },
 
-
-async sendRequest() {
+    async sendRequest() {
       try {
-        console.log("[Component][sendRequest] Send Message Requeste");
-        const isValid = this.$refs.insertForm.validate();
-        if (!isValid) return
-        await ThingsService.sendRequest(this.form.name, this.form.lastname, this.form.email);
-        this.hideInsertDialog()
+        console.log("[Pages][sendRequest] Send Message Request");
+        const isValid = this.$refs.form.validate();
+        if (!isValid) return;
+        await IllustrationService.sendRequest(
+          this.form.name,
+          this.form.lastname,
+          this.form.email
+        );
+        this.hideDialog();
       } catch (e) {
-        console.error("[Component][Things][insertThings] An error occurred when insert thing", e);
+        console.error(
+          "[Pages][Illustration][SendRequest] An error occurred when send request",
+          e
+        );
         this.showDialogError();
       }
     },
-
-
-
-
-
-
-
-
-   
   },
-  
 };
 </script>
 
 <style>
-
+.margin {
+  margin-top: 100px;
+}
 
 .format {
   margin: auto;
