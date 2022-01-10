@@ -163,10 +163,7 @@ export default {
   },
 
   methods: {
-    sendRequest(){
-      
-
-    },
+   
     
     showDialog() {
       this.dialog = true;
@@ -178,6 +175,28 @@ export default {
      validate() {
       this.$refs.form.validate();
     },
+
+
+async sendRequest() {
+      try {
+        console.log("[Component][sendRequest] Send Message Requeste");
+        const isValid = this.$refs.insertForm.validate();
+        if (!isValid) return
+        await ThingsService.sendRequest(this.form.name, this.form.lastname, this.form.email);
+        this.hideInsertDialog()
+      } catch (e) {
+        console.error("[Component][Things][insertThings] An error occurred when insert thing", e);
+        this.showDialogError();
+      }
+    },
+
+
+
+
+
+
+
+
    
   },
   
