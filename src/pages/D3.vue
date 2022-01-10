@@ -1,10 +1,9 @@
 <template>
-  <v-container>
+  <div>
     <v-row>
       <v-col
         v-for="(list, index) in listprojet"
         :key="index"
-        class="D3"
         cols="4"
       >
         <v-img
@@ -45,7 +44,7 @@
         </v-card-text>
       </v-card>
     </v-dialog>
-  </v-container>
+  </div>
 </template>
 
 
@@ -76,10 +75,6 @@ export default {
 </script>
 
 <style>
-.D3 {
-  margin-top: 150px;
-  margin-bottom: 50px;
-}
 .descriptionD3{
   margin: auto;
 }
