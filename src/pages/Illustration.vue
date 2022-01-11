@@ -1,5 +1,5 @@
 <template>
-  <div class="margin">
+  <div class="margin-illustration">
     <v-row>
       <!-- Ligne une  -->
       <v-col v-for="(list, index) in listprojet" :key="index" cols="12" md="4">
@@ -19,7 +19,12 @@
 
       <!-- Dialog -->
 
-      <v-dialog v-model="dialog" max-width="50%">
+      <v-dialog
+        v-model="dialog"
+        max-width="50%"
+        @click:outside="hideDialog()"
+        @keydown.esc="hideDialog()"
+      >
         <v-card max-width="auto">
           <v-card-text>
             <v-container>
@@ -64,14 +69,14 @@
                 <v-col cols="10">
                   <v-form ref="form" v-model="valid" lazy-validation>
                     <v-text-field
-                      v-model="name"
+                      v-model="form.name"
                       :counter="10"
                       :rules="nameRules"
                       label="Name"
                       required
                     ></v-text-field>
                     <v-text-field
-                      v-model="lastname"
+                      v-model="form.lastname"
                       :counter="10"
                       :rules="lastnameRules"
                       label="LastName"
@@ -79,7 +84,7 @@
                     ></v-text-field>
 
                     <v-text-field
-                      v-model="email"
+                      v-model="form.email"
                       :rules="emailRules"
                       label="E-mail"
                       required
@@ -96,9 +101,18 @@
                       :disabled="!valid"
                       color="success"
                       class="mr-4"
-                      @click="validate"
+                      @click="sendRequest()"
                     >
                       Validate
+                    </v-btn>
+                    <v-btn
+                      class="red darken-1 white--text"
+                      large
+                      rounded
+                      @click="hideDialog()"
+                    >
+                      <v-icon left>mdi-cancel</v-icon>
+                      Cancel
                     </v-btn>
                   </v-form>
                 </v-col>
@@ -179,19 +193,21 @@ export default {
       this.$refs.form.validate();
     },
     hideDialog() {
-      this.insertDialog = false;
+      this.dialog = false;
       this.form = {
         name: null,
         lastname: null,
         email: null,
       };
-      this.$refs.form.reset();
+      (this.selectedIllustration = null),
+        (this.selectedFormat = null),
+        this.$refs.form.reset();
     },
-     // Dialog pour les ereurs services
+    // Dialog pour les ereurs services
     hideDialogError() {
       this.showMessageError = false;
     },
-      // Dialog pour les ereurs services
+    // Dialog pour les ereurs services
     showDialogError() {
       this.showMessageError = true;
     },
@@ -204,7 +220,9 @@ export default {
         await IllustrationService.sendRequest(
           this.form.name,
           this.form.lastname,
-          this.form.email
+          this.form.email,
+          this.selectedFormat,
+          this.selectedIllustration
         );
         this.hideDialog();
       } catch (e) {
@@ -220,8 +238,9 @@ export default {
 </script>
 
 <style>
-.margin {
-  margin-top: 100px;
+.margin-illustration {
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
 
 .format {
