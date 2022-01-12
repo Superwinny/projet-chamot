@@ -1,31 +1,36 @@
 <template>
   <v-app-bar
-      class="indigo lighten-1 white--text text-center"
-      dense
-      dark
-      :height="this.$route.name === 'Home' ? '600px' : '250px'"
-      app
+    class="indigo lighten-1 white--text text-center"
+    dense
+    dark
+    :height="this.$route.name === 'Home' ? '600px' : '250px'"
+    :absolute="this.$route.name === 'Home'"
+    :hide-on-scroll="this.$route.name === 'Home'"
+    app
+    scroll-target="#scrolling-techniques-4"
   >
     <v-container>
-      <v-row align="center"
-             justify="center"
-             class="text-center">
+      <v-row align="center" justify="center" class="text-center">
         <v-col cols="12">
           <img
-              class="rounded-image"
-              height="150"
-              width="150"
-              src="https://picsum.photos/id/11/500/300"
+            class="rounded-image"
+            height="150"
+            width="150"
+            src="https://picsum.photos/id/11/500/300"
           />
         </v-col>
       </v-row>
-      <v-row align="center"
-             justify="center"
-             class="text-center">
+      <v-row align="center" justify="center" class="text-center">
         <v-col cols="12">
-          <v-btn icon to="/">
-            <v-icon>mdi-home</v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon to="/" v-bind="attrs" v-on="on">
+                <v-icon>mdi-home</v-icon>
+              </v-btn>
+            </template>
+            <span>Home</span>
+          </v-tooltip>
+
           <v-btn icon to="/illustration">
             <v-icon>mdi-image-outline</v-icon>
           </v-btn>
@@ -46,7 +51,7 @@
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
 };
 </script>
 

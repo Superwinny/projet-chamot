@@ -49,14 +49,16 @@
                     :counter="10"
                     :rules="nameRules"
                     label="Name"
+                    color="deep-purple"
                     required
                   ></v-text-field>
                   <v-text-field
                     v-model="form.lastname"
-                    :counter="10"
+                    :counter="15"
                     :rules="lastnameRules"
                     label="LastName"
                     required
+                    color="deep-purple"
                   ></v-text-field>
 
                   <v-text-field
@@ -64,6 +66,7 @@
                     :rules="emailRules"
                     label="E-mail"
                     required
+                    color="deep-purple"
                   ></v-text-field>
 
                   <v-checkbox
@@ -77,6 +80,7 @@
                     :disabled="!valid"
                     color="success"
                     class="mr-4"
+                    large
                     @click="sendRequest()"
                   >
                     Validate
@@ -84,7 +88,6 @@
                   <v-btn
                     class="red darken-1 white--text"
                     large
-                    rounded
                     @click="hideDialog()"
                   >
                     <v-icon left>mdi-cancel</v-icon>
@@ -122,14 +125,7 @@ export default {
   name: "D3",
   data() {
     return {
-      // Validations
       valid: true,
-      name: "",
-      nameRules: [(v) => !!v || "Name is required"],
-      lastname: "",
-      lastnameRules: [(v) => !!v || "Name is required"],
-      email: "",
-      emailRules: [(v) => !!v || "E-mail is required"],
       showMessageError: false,
       select: null,
       checkbox: false,
@@ -142,6 +138,14 @@ export default {
         lastname: null,
         email: null,
       },
+      // Rules D3
+
+      name: "",
+      nameRules: [(v) => !!v || "Name is required"],
+      lastname: "",
+      lastnameRules: [(v) => !!v || "Name is required"],
+      email: "",
+      emailRules: [(v) => !!v || "E-mail is required"],
     };
   },
 
@@ -199,8 +203,8 @@ export default {
 </script>
 
 <style>
-.margin-d3{
-margin-top: 100px;
-margin-bottom: 100px;
+.margin-d3 {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 </style>

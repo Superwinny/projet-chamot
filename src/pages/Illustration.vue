@@ -1,7 +1,7 @@
 <template>
   <div class="margin-illustration">
     <v-row>
-      <!-- Ligne une  -->
+      <!-- Ligne -->
       <v-col v-for="(list, index) in listprojet" :key="index" cols="12" md="4">
         <v-card class="mx-auto" max-width="auto">
           <v-img
@@ -24,7 +24,9 @@
         max-width="50%"
         @click:outside="hideDialog()"
         @keydown.esc="hideDialog()"
-      >
+        class="dialog"
+        dark
+        >
         <v-card max-width="auto">
           <v-card-text>
             <v-container>
@@ -45,10 +47,10 @@
                     }}</v-card-title
                   >
                   <v-card-title> </v-card-title>
-                  <v-card-subtitle>
+                  <v-card-title>
                     {{
                       selectedIllustration && selectedIllustration.description
-                    }}</v-card-subtitle
+                    }}</v-card-title
                   >
                   <v-select
                     v-model="selectedFormat"
@@ -74,13 +76,15 @@
                       :rules="nameRules"
                       label="Name"
                       required
+                      color="deep-purple"
                     ></v-text-field>
                     <v-text-field
                       v-model="form.lastname"
-                      :counter="10"
+                      :counter="15"
                       :rules="lastnameRules"
                       label="LastName"
                       required
+                      color="deep-purple"
                     ></v-text-field>
 
                     <v-text-field
@@ -88,6 +92,7 @@
                       :rules="emailRules"
                       label="E-mail"
                       required
+                      color="deep-purple"
                     ></v-text-field>
 
                     <v-checkbox
@@ -101,6 +106,7 @@
                       :disabled="!valid"
                       color="success"
                       class="mr-4"
+                      large
                       @click="sendRequest()"
                     >
                       Validate
@@ -108,7 +114,6 @@
                     <v-btn
                       class="red darken-1 white--text"
                       large
-                      rounded
                       @click="hideDialog()"
                     >
                       <v-icon left>mdi-cancel</v-icon>
@@ -149,12 +154,6 @@ export default {
   data() {
     return {
       valid: true,
-      name: "",
-      nameRules: [(v) => !!v || "Name is required"],
-      lastname: "",
-      lastnameRules: [(v) => !!v || "Name is required"],
-      email: "",
-      emailRules: [(v) => !!v || "E-mail is required"],
       showMessageError: false,
       select: null,
       checkbox: false,
@@ -178,6 +177,14 @@ export default {
         lastname: null,
         email: null,
       },
+      // Rules Illustration
+
+      name: "",
+      nameRules: [(v) => !!v || "Name is required"],
+      lastname: "",
+      lastnameRules: [(v) => !!v || "Name is required"],
+      email: "",
+      emailRules: [(v) => !!v || "E-mail is required"],
     };
   },
 
@@ -238,6 +245,11 @@ export default {
 </script>
 
 <style>
+.dialog{
+  border-block-color: red ;
+}
+
+
 .margin-illustration {
   margin-top: 250px;
   margin-bottom: 250px;

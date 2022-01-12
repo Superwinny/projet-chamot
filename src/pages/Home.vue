@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-row>
+  <div class="home">
+    <v-row  id="scrolling-techniques-4">
       <v-col cols="12" md="4">
         <v-card class="mx-auto" max-width="auto">
           <v-img
@@ -32,4 +32,7 @@ export default {
 };
 </script>
 <style>
+.home{
+  margin-top: 50px;
+}
 </style>

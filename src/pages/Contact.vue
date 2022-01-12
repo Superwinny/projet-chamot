@@ -1,37 +1,43 @@
 <template>
-  <div>
+  <div class="contact">
     <v-row>
-      <v-col cols="12" md="5">
+      <v-col cols="4"> </v-col>
+      <v-col cols="4">
         <v-form ref="form" v-model="valid" lazy-validation>
           <v-text-field
-            v-model="name"
+            v-model="form.name"
             :counter="10"
             :rules="nameRules"
             label="Name"
             required
+            color="deep-purple"
           ></v-text-field>
           <v-text-field
-            v-model="lastname"
-            :counter="10"
+            v-model="form.lastname"
+            :counter="15"
             :rules="lastnameRules"
             label="LastName"
             required
+            color="deep-purple"
           ></v-text-field>
 
           <v-text-field
-            v-model="email"
+            v-model="form.email"
             :rules="emailRules"
             label="E-mail"
             required
+            color="deep-purple"
           ></v-text-field>
-
-          <v-select
-            v-model="select"
-            :items="items"
-            :rules="[(v) => !!v || 'Item is required']"
-            label="Item"
+          <v-textarea
+            v-model="form.message"
+            :rules="messageRules"
             required
-          ></v-select>
+            auto-grow
+            filled
+            placeholder="Hello"
+            color="deep-purple"
+            rows="2"
+          ></v-textarea>
 
           <v-checkbox
             v-model="checkbox"
@@ -44,19 +50,36 @@
             :disabled="!valid"
             color="success"
             class="mr-4"
-            @click="validate"
+            large
+            @click="sendRequest()"
           >
-            Validate
-          </v-btn>
-
-          <v-btn color="error" class="mr-4" @click="reset"> Reset Form </v-btn>
-
-          <v-btn color="warning" @click="resetValidation">
-            Reset Validation
+            Validate </v-btn
+          >
+          <v-btn
+            class="red darken-1 white--text"
+            large
+            @click="hideDialog()"
+          >
+            <v-icon left>mdi-cancel</v-icon>
+            Cancel
           </v-btn>
         </v-form>
       </v-col>
-      <v-col cols="12" md="5" class="ContactForm">
+      <v-col cols="4"> </v-col>
+      <!-- error dialog-->
+      <v-dialog v-model="showMessageError" width="600px">
+        <v-card>
+          <v-card-text>Error</v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="error" class="mr-4" @click="hideDialogError()">
+              Close
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
+      <!-- <v-col cols="12" md="5" class="ContactForm">
         <v-card class="mx-auto" max-width="auto">
           <v-img
             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -64,50 +87,89 @@
             width="auto"
           ></v-img>
         </v-card>
-      </v-col>
+      </v-col> -->
     </v-row>
   </div>
 </template>
 
 <script>
+import ContactService from "../services/contactService.js";
+
 export default {
   name: "Contact",
   data: () => ({
+    dialog: false,
+    checkbox: true,
     valid: true,
+    showMessageError: false,
+
+    // Rules Contact Form
     name: "",
-    nameRules: [
-      (v) => !!v || "Name is required",
-      (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
-    ],
+    nameRules: [(v) => !!v || "Name is required"],
     lastname: "",
-    lastnameRules: [
-      (v) => !!v || "Name is required",
-      (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
-    ],
+    lastnameRules: [(v) => !!v || "Name is required"],
     email: "",
-    emailRules: [
-      (v) => !!v || "E-mail is required",
-      (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-    ],
-    select: null,
-    items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    checkbox: false,
+    emailRules: [(v) => !!v || "E-mail is required"],
+    message: "",
+    messageRules: [(v) => !!v || "Message is required"],
+    form: {
+      name: null,
+      lastname: null,
+      email: null,
+      message: null,
+    },
   }),
 
   methods: {
+    hideDialog() {
+      this.dialog = false;
+      this.form = {
+        name: null,
+        lastname: null,
+        email: null,
+        message: null,
+      };
+      this.$refs.form.reset();
+    },
+    // Dialog pour les ereurs services
+    hideDialogError() {
+      this.showMessageError = false;
+    },
+    // Dialog pour les ereurs services
+    showDialogError() {
+      this.showMessageError = true;
+    },
     validate() {
       this.$refs.form.validate();
     },
-    reset() {
-      this.$refs.form.reset();
-    },
-    resetValidation() {
-      this.$refs.form.resetValidation();
+    async sendRequest() {
+      try {
+        console.log("[Pages][sendRequest] Send Message Request");
+        const isValid = this.$refs.form.validate();
+        if (!isValid) return;
+        await ContactService.sendRequest(
+          this.form.name,
+          this.form.lastname,
+          this.form.email,
+          this.form.message
+        );
+        this.hideDialog();
+      } catch (e) {
+        console.error(
+          "[Pages][Contact][SendRequest] An error occurred when send request",
+          e
+        );
+        this.showDialogError();
+      }
     },
   },
 };
 </script>
 
 <style>
-
+.contact {
+  margin-top: 250px;
+  /*  Todo Background Image du projet Genève a modifier avec du css pure */
+  /* background-image:"/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg", ; */
+}
 </style>
