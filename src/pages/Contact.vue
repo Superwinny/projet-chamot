@@ -10,6 +10,7 @@
             :rules="nameRules"
             label="Name"
             required
+            placeholder="Name"
             color="deep-purple"
           ></v-text-field>
           <v-text-field
@@ -18,6 +19,7 @@
             :rules="lastnameRules"
             label="LastName"
             required
+            placeholder="LastName"
             color="deep-purple"
           ></v-text-field>
 
@@ -26,6 +28,7 @@
             :rules="emailRules"
             label="E-mail"
             required
+            placeholder="E-mail"
             color="deep-purple"
           ></v-text-field>
           <v-textarea
@@ -34,7 +37,7 @@
             required
             auto-grow
             filled
-            placeholder="Hello"
+            placeholder="Message"
             color="deep-purple"
             rows="2"
           ></v-textarea>
@@ -53,13 +56,9 @@
             large
             @click="sendRequest()"
           >
-            Validate </v-btn
-          >
-          <v-btn
-            class="red darken-1 white--text"
-            large
-            @click="hideDialog()"
-          >
+            Validate
+          </v-btn>
+          <v-btn class="red darken-1 white--text" large @click="hideDialog()">
             <v-icon left>mdi-cancel</v-icon>
             Cancel
           </v-btn>
@@ -78,16 +77,6 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
-
-      <!-- <v-col cols="12" md="5" class="ContactForm">
-        <v-card class="mx-auto" max-width="auto">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="400px"
-            width="auto"
-          ></v-img>
-        </v-card>
-      </v-col> -->
     </v-row>
   </div>
 </template>
@@ -168,7 +157,8 @@ export default {
 
 <style>
 .contact {
-  margin-top: 250px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   /*  Todo Background Image du projet Genève a modifier avec du css pure */
   /* background-image:"/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg", ; */
 }

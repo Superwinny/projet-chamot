@@ -30,19 +30,38 @@
             </template>
             <span>Home</span>
           </v-tooltip>
-
-          <v-btn icon to="/illustration">
-            <v-icon>mdi-image-outline</v-icon>
-          </v-btn>
-          <v-btn icon to="/d3">
-            <v-icon>mdi-video-3d</v-icon>
-          </v-btn>
-          <v-btn icon to="/d2">
-            <v-icon>mdi-video-3d-off</v-icon>
-          </v-btn>
-          <v-btn icon to="/contact">
-            <v-icon>mdi-account-box</v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon to="/illustration" v-bind="attrs" v-on="on">
+                <v-icon>mdi-image-outline</v-icon>
+              </v-btn>
+            </template>
+            <span>Illustration</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon to="/d3" v-bind="attrs" v-on="on">
+                <v-icon>mdi-video-3d</v-icon>
+              </v-btn>
+            </template>
+            <span>3D</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon to="/d2" v-bind="attrs" v-on="on">
+                <v-icon>mdi-video-3d-off</v-icon>
+              </v-btn>
+            </template>
+            <span>2D</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon to="/contact" v-bind="attrs" v-on="on">
+                <v-icon>mdi-account-box</v-icon>
+              </v-btn>
+            </template>
+            <span>Contact</span>
+          </v-tooltip>
         </v-col>
       </v-row>
     </v-container>

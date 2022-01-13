@@ -18,13 +18,14 @@
       max-width="50%"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
+      dark
     >
       <v-card max-width="auto">
         <v-card-text>
           <v-container>
             <v-row>
               <v-col cols="12">
-                <v-carousel v-if="selectedD2" hide-delimiters>
+                <v-carousel v-if="selectedD2" hide-delimiters >
                   <v-carousel-item
                     v-for="(img, index) in selectedD2.imgSecondaire"
                     :key="index"
@@ -49,24 +50,27 @@
                     :counter="10"
                     :rules="nameRules"
                     label="Name"
+                     placeholder="Name"
                     required
-                     color="deep-purple"
+                    color="deep-purple"
                   ></v-text-field>
                   <v-text-field
                     v-model="form.lastname"
                     :counter="15"
                     :rules="lastnameRules"
                     label="LastName"
+                     placeholder="LastName"
                     required
-                     color="deep-purple"
+                    color="deep-purple"
                   ></v-text-field>
 
                   <v-text-field
                     v-model="form.email"
                     :rules="emailRules"
                     label="E-mail"
+                     placeholder="E-mail"
                     required
-                     color="deep-purple"
+                    color="deep-purple"
                   ></v-text-field>
 
                   <v-checkbox
@@ -74,7 +78,7 @@
                     :rules="[(v) => !!v || 'You must agree to continue!']"
                     label="Do you agree?"
                     required
-                     color="deep-purple"
+                    color="deep-purple"
                   ></v-checkbox>
 
                   <v-btn
@@ -89,7 +93,6 @@
                   <v-btn
                     class="red darken-1 white--text"
                     large
-                    
                     @click="hideDialog()"
                   >
                     <v-icon left>mdi-cancel</v-icon>

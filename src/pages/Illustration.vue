@@ -76,6 +76,7 @@
                       :rules="nameRules"
                       label="Name"
                       required
+                       placeholder="Name"
                       color="deep-purple"
                     ></v-text-field>
                     <v-text-field
@@ -84,6 +85,7 @@
                       :rules="lastnameRules"
                       label="LastName"
                       required
+                       placeholder="LastName"
                       color="deep-purple"
                     ></v-text-field>
 
@@ -92,6 +94,7 @@
                       :rules="emailRules"
                       label="E-mail"
                       required
+                       placeholder="E-mail"
                       color="deep-purple"
                     ></v-text-field>
 

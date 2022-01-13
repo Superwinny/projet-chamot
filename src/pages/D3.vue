@@ -18,6 +18,7 @@
       max-width="50%"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
+      dark
     >
       <v-card max-width="auto">
         <v-card-text>
@@ -49,6 +50,7 @@
                     :counter="10"
                     :rules="nameRules"
                     label="Name"
+                     placeholder="Name"
                     color="deep-purple"
                     required
                   ></v-text-field>
@@ -58,6 +60,7 @@
                     :rules="lastnameRules"
                     label="LastName"
                     required
+                     placeholder="LastName"
                     color="deep-purple"
                   ></v-text-field>
 
@@ -66,6 +69,7 @@
                     :rules="emailRules"
                     label="E-mail"
                     required
+                     placeholder="E-mail"
                     color="deep-purple"
                   ></v-text-field>
 
