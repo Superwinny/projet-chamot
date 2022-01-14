@@ -38,6 +38,7 @@
                     "
                     height="300px"
                     width="auto"
+                    class="img-illustration"
                   ></v-img>
                 </v-col>
                 <v-col cols="6">
@@ -260,5 +261,9 @@ export default {
 
 .format {
   margin: auto;
+}
+.img-illustration{
+  border-radius: 25px;
+  margin-top: 20px;
 }
 </style>

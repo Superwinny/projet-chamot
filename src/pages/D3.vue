@@ -15,6 +15,8 @@
 
     <v-dialog
       v-model="dialog"
+      scrollable="false"
+      height="100%"
       max-width="50%"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
@@ -25,7 +27,11 @@
           <v-container>
             <v-row>
               <v-col cols="12">
-                <v-carousel v-if="selectedD3" hide-delimiters>
+                <v-carousel
+                  v-if="selectedD3"
+                  hide-delimiters
+                  class="carousel-img"
+                >
                   <v-carousel-item
                     v-for="(img, index) in selectedD3.imgSecondaire"
                     :key="index"
@@ -50,7 +56,7 @@
                     :counter="10"
                     :rules="nameRules"
                     label="Name"
-                     placeholder="Name"
+                    placeholder="Name"
                     color="deep-purple"
                     required
                   ></v-text-field>
@@ -60,7 +66,7 @@
                     :rules="lastnameRules"
                     label="LastName"
                     required
-                     placeholder="LastName"
+                    placeholder="LastName"
                     color="deep-purple"
                   ></v-text-field>
 
@@ -69,7 +75,7 @@
                     :rules="emailRules"
                     label="E-mail"
                     required
-                     placeholder="E-mail"
+                    placeholder="E-mail"
                     color="deep-purple"
                   ></v-text-field>
 
@@ -210,5 +216,9 @@ export default {
 .margin-d3 {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+.carousel-img {
+  border-radius: 25px;
+  margin-top: 15px;
 }
 </style>
