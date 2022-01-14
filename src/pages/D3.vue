@@ -21,6 +21,9 @@
       max-width="50%"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
+      scrollable="false"
+      
+      :fullscreen="this.$vuetify.breakpoint.name === 'xs' || this.$vuetify.breakpoint.name === 'sm'"
       dark
     >
       <v-card max-width="auto">

@@ -18,8 +18,10 @@
     <v-dialog
       v-model="dialog"
       max-width="50%"
+      scrollable="false"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
+      :fullscreen="this.$vuetify.breakpoint.name === 'xs' || this.$vuetify.breakpoint.name === 'sm'"
       dark
     >
       <v-card max-width="auto">
@@ -27,7 +29,7 @@
           <v-container>
             <v-row>
               <v-col cols="12">
-                <v-carousel v-if="selectedD2" hide-delimiters >
+                <v-carousel v-if="selectedD2" hide-delimiters class="carousel-img" >
                   <v-carousel-item
                     v-for="(img, index) in selectedD2.imgSecondaire"
                     :key="index"
@@ -212,5 +214,9 @@ export default {
 .margin-d2 {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+.carousel-img {
+  border-radius: 25px;
+  margin-top: 15px;
 }
 </style>
