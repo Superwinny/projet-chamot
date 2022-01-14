@@ -3,6 +3,8 @@
     <v-row>
       <v-col v-for="(list, index) in listprojet" :key="index" cols="4">
         <v-img
+          height="90%"
+          width="90%"
           :src="list.imgPrincipal"
           aspect-ratio="1"
           class="grey lighten-2"
@@ -15,7 +17,6 @@
 
     <v-dialog
       v-model="dialog"
-      scrollable="false"
       height="100%"
       max-width="50%"
       @click:outside="hideDialog()"
@@ -221,4 +222,7 @@ export default {
   border-radius: 25px;
   margin-top: 15px;
 }
+
+
+
 </style>

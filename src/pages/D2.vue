@@ -3,6 +3,8 @@
     <v-row>
       <v-col v-for="(list, index) in listprojet" :key="index" cols="4">
         <v-img
+          height="90%"
+          width="90%"
           :src="list.imgPrincipal"
           aspect-ratio="1"
           class="grey lighten-2"
