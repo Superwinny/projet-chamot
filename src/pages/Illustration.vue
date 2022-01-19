@@ -6,14 +6,14 @@
         <v-card class="mx-auto" max-width="auto">
           <v-img
             :src="list.imgPrincipal"
-            height="250px"
+            height="300px"
             width="auto"
             @click="selectIllustration(list)"
           ></v-img>
 
           <v-card-title> {{ list.nomProjet }}</v-card-title>
 
-          <v-card-subtitle> {{ list.descriptions }}</v-card-subtitle>
+          <v-card-subtitle> {{ list.description }}</v-card-subtitle>
         </v-card>
       </v-col>
 
@@ -48,9 +48,16 @@
                     }}</v-card-title
                   >
                   <v-card-title> </v-card-title>
-                  <v-card-title>
+                  <!-- <v-card-title>
                     {{
                       selectedIllustration && selectedIllustration.description
+                    }}</v-card-title
+                  > -->
+                   <v-card-title>
+                    {{
+                      selectedIllustration && selectedIllustration.entreprise
+                    }} {{
+                      selectedIllustration && selectedIllustration.date
                     }}</v-card-title
                   >
                   <v-select
@@ -169,11 +176,11 @@ export default {
       format: [
         {
           name: "20x20",
-          price: 150,
+          price: "24CHF"
         },
         {
           name: "30x40",
-          price: 200,
+          price: "39CHF",
         },
       ],
       form: {

@@ -21,7 +21,10 @@
       scrollable="false"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
-      :fullscreen="this.$vuetify.breakpoint.name === 'xs' || this.$vuetify.breakpoint.name === 'sm'"
+      :fullscreen="
+        this.$vuetify.breakpoint.name === 'xs' ||
+        this.$vuetify.breakpoint.name === 'sm'
+      "
       dark
     >
       <v-card max-width="auto">
@@ -29,7 +32,11 @@
           <v-container>
             <v-row>
               <v-col cols="12">
-                <v-carousel v-if="selectedD2" hide-delimiters class="carousel-img" >
+                <v-carousel
+                  v-if="selectedD2"
+                  hide-delimiters
+                  class="carousel-img"
+                >
                   <v-carousel-item
                     v-for="(img, index) in selectedD2.imgSecondaire"
                     :key="index"
@@ -40,6 +47,9 @@
                 </v-carousel>
               </v-col>
               <v-col cols="12">
+                <v-card-title class="descriptionD2">
+                  {{ selectedD3 && selectedD3.nomProjet }}</v-card-title
+                >
                 <v-card-title class="descriptionD2">
                   {{ selectedD2 && selectedD2.description }}</v-card-title
                 >
@@ -54,7 +64,7 @@
                     :counter="10"
                     :rules="nameRules"
                     label="Name"
-                     placeholder="Name"
+                    placeholder="Name"
                     required
                     color="deep-purple"
                   ></v-text-field>
@@ -63,7 +73,7 @@
                     :counter="15"
                     :rules="lastnameRules"
                     label="LastName"
-                     placeholder="LastName"
+                    placeholder="LastName"
                     required
                     color="deep-purple"
                   ></v-text-field>
@@ -72,7 +82,7 @@
                     v-model="form.email"
                     :rules="emailRules"
                     label="E-mail"
-                     placeholder="E-mail"
+                    placeholder="E-mail"
                     required
                     color="deep-purple"
                   ></v-text-field>

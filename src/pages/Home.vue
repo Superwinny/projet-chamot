@@ -4,8 +4,8 @@
       <v-col cols="12" md="4">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="800px"
+            src="/img/1Y1A0615.jpeg"
+            height="700px"
             width="auto"
           ></v-img>
         </v-card>

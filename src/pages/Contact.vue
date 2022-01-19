@@ -159,7 +159,6 @@ export default {
 .contact {
   margin-top: 100px;
   margin-bottom: 100px;
-  /*  Todo Background Image du projet Genève a modifier avec du css pure */
-  /* background-image:"/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg", ; */
+  background-image:"/img/Illustration/Geneve.png"
 }
 </style>

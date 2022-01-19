@@ -22,8 +22,10 @@
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
       scrollable="false"
-      
-      :fullscreen="this.$vuetify.breakpoint.name === 'xs' || this.$vuetify.breakpoint.name === 'sm'"
+      :fullscreen="
+        this.$vuetify.breakpoint.name === 'xs' ||
+        this.$vuetify.breakpoint.name === 'sm'
+      "
       dark
     >
       <v-card max-width="auto">
@@ -46,6 +48,9 @@
                 </v-carousel>
               </v-col>
               <v-col cols="12">
+                                <v-card-title class="descriptionD3">
+                  {{ selectedD3 && selectedD3.nomProjet }}</v-card-title
+                >
                 <v-card-title class="descriptionD3">
                   {{ selectedD3 && selectedD3.description }}</v-card-title
                 >
@@ -225,7 +230,4 @@ export default {
   border-radius: 25px;
   margin-top: 15px;
 }
-
-
-
 </style>

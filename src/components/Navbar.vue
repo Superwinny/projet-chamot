@@ -16,7 +16,8 @@
             class="rounded-image"
             height="150"
             width="150"
-            src="https://picsum.photos/id/11/500/300"
+            src="/img/Logo_lola"
+
           />
         </v-col>
       </v-row>

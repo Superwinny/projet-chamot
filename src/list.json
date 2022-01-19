@@ -1,100 +1,145 @@
 {
     "listIllustration": [
         {
-            "nomProjet": "LOL",
+            "nomProjet": "Skull of Love",
             "id": 0,
             "description": "ahahahha",
-            "date": "",
-            "entreprise": "",
-            "format": "",
-            "imgPrincipal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-            "imgSecondaire": [
-                "https://images.unsplash.com/photo-1641541099832-2021b6aab362?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-                "https://images.unsplash.com/photo-1640622842008-1897f26aafe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-                "https://images.unsplash.com/photo-1641538926315-265729863fb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
-            ]
+            "date": "10.10.10",
+            "entreprise": "Freelance",
+            "format": "20x20",
+            "imgPrincipal": "/img/Illustration/Skull_of_love.jpg"
         },
-
         {
-            "nomProjet": "LOL 2",
+            "nomProjet": "Open Mind",
             "id": 1,
             "description": "",
             "date": "",
             "entreprise": "",
             "format": "",
-            "imgPrincipal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-            "imgSecondaire": [
-                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg",
-                "/img/Spots/Park/Plainpalais/Carrousel/Plainpalais-crz-0.jpg"
-            ]
+            "imgPrincipal": "/img/Illustration/Open-minded2.png"
+        },
+        {
+            "nomProjet": "Portrait",
+            "id": 4,
+            "description": "",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": "/img/Illustration/Cassis.png"
+        },
+        {
+            "nomProjet": "Skull of Love",
+            "id": 2,
+            "description": "",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": "/img/Illustration/Skull_of_love2.png"
+        },
+        {
+            "nomProjet": "Open Mind",
+            "id": 3,
+            "description": "",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": "/img/Illustration/Open-minded3.png"
+        },
+        {
+            "nomProjet": "Portrait",
+            "id": 5,
+            "description": "",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": "/img/Illustration/Materinty.png"
         }
     ],
     "listD3": [
         {
-            "nomProjet": "D31",
+            "nomProjet": "American Tourister",
             "id": 0,
-            "description": "Babaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "description": "",
             "date": "",
             "entreprise": "",
             "format": "",
-            "imgPrincipal": 
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-            
+            "imgPrincipal": "/img/3D/AmericanTourister/FullSizeRender21.jpg",
             "imgSecondaire": [
-                "https://images.unsplash.com/photo-1641541099832-2021b6aab362?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-                "https://images.unsplash.com/photo-1640622842008-1897f26aafe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-                "https://images.unsplash.com/photo-1641538926315-265729863fb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                "/img/3D/AmericanTourister/FullSizeRender38.jpg",
+                "/img/3D/AmericanTourister/FullSizeRender39.jpg",
+                "/img/3D/AmericanTourister/FullSizeRender40.jpg"
             ]
         },
         {
-            "nomProjet": "D32",
+            "nomProjet": "Beach",
             "id": 1,
-            "description": "Baba",
+            "description": "",
             "date": "",
             "entreprise": "",
             "format": "",
-            "imgPrincipal": 
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-            
+            "imgPrincipal": "/img/3D/Beach/FullSizeRender 3.jpg",
             "imgSecondaire": [
-                "https://images.unsplash.com/photo-1641541099832-2021b6aab362?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-                "https://images.unsplash.com/photo-1640622842008-1897f26aafe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-                "https://images.unsplash.com/photo-1641538926315-265729863fb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                "/img/3D/Beach/FullSizeRender.jpg",
+                "/img/3D/Beach/FullSizeRender 2.jpg",
+                "/img/3D/Beach/FullSizeRender 4.jpg",
+                "/img/3D/Beach/FullSizeRender 5.jpg"
+
             ]
         },
         {
-            "nomProjet": "D32",
-            "id": 1,
-            "description": "Baba",
+            "nomProjet": "Beauty",
+            "id": 2,
+            "description": "ahahahhahahah",
             "date": "",
             "entreprise": "",
             "format": "",
-            "imgPrincipal": 
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-            
+            "imgPrincipal": "/img/3D/Beauty/FullSizeRender10.jpg",
             "imgSecondaire": [
-                "https://images.unsplash.com/photo-1641541099832-2021b6aab362?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-                "https://images.unsplash.com/photo-1640622842008-1897f26aafe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-                "https://images.unsplash.com/photo-1641538926315-265729863fb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                "/img/3D/Beauty/IMG_2832.jpg",
+                "/img/3D/Beauty/FullSizeRender13.jpg",
+                "/img/3D/Beauty/FullSizeRender18.jpg",
+                "/img/3D/Beauty/FullSizeRender46.jpg"
             ]
         }
-     
     ],
-    
     "listD2": [
         {
-            "nomProjet": "",
+            "nomProjet": "White Oak",
             "id": 0,
             "description": "ahahahhaahha",
             "date": "",
             "entreprise": "",
             "format": "",
-            "imgPrincipal": 
-            "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+            "imgPrincipal": "/img/2D/WhiteOak/Cartevisite.png    ",
             "imgSecondaire": [
-                "https://images.unsplash.com/photo-1641541099832-2021b6aab362?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-                "https://images.unsplash.com/photo-1640622842008-1897f26aafe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-                "https://images.unsplash.com/photo-1641538926315-265729863fb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                "/img/2D/WhiteOak/Vitrine.png    ",
+                "/img/2D/WhiteOak/Logo.png    ",
+                "/img/2D/WhiteOak/IMG_2810.jpg   "
+            ]
+        },
+        {
+            "nomProjet": "Collection éditoriale",
+            "id": 1,
+            "description": "ahahahhaahha",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": "/img/2D/Collectioneditoriale/Collection_editoriale.png    ",
+            "imgSecondaire": [
+                "/img/2D/Collectioneditoriale/Collection_editoriale2.png    "
+            ]
+        },
+        {
+            "nomProjet": "CGR Avocat",
+            "id": 2,
+            "description": "ahahahhaahha",
+            "date": "",
+            "entreprise": "",
+            "format": "",
+            "imgPrincipal": "/img/2D/CGR/Logo.png    ",
+            "imgSecondaire": [
+                "/img/2D/CGR/Carte.png    ",
+                "/img/2D/CGR/Porte.png    "
             ]
         }
     ]
