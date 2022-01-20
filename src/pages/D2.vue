@@ -18,7 +18,6 @@
     <v-dialog
       v-model="dialog"
       max-width="50%"
-      scrollable="false"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
       :fullscreen="
@@ -48,7 +47,7 @@
               </v-col>
               <v-col cols="12">
                 <v-card-title class="descriptionD2">
-                  {{ selectedD3 && selectedD3.nomProjet }}</v-card-title
+                  {{ selectedD2 && selectedD2.nomProjet }}</v-card-title
                 >
                 <v-card-title class="descriptionD2">
                   {{ selectedD2 && selectedD2.description }}</v-card-title

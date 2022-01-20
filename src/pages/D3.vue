@@ -21,7 +21,6 @@
       max-width="50%"
       @click:outside="hideDialog()"
       @keydown.esc="hideDialog()"
-      scrollable="false"
       :fullscreen="
         this.$vuetify.breakpoint.name === 'xs' ||
         this.$vuetify.breakpoint.name === 'sm'
@@ -49,7 +48,7 @@
               </v-col>
               <v-col cols="12">
                 <v-card-title class="descriptionD3">
-                  {{ selectedD3 && selectedD3.nomProjet }}</v-card-title
+                  {{ selectedD3 && selectedD3.nomProjet }}<v-spacer></v-spacer>{{ selectedD3 && selectedD3.date }}</v-card-title
                 >
                 <v-card-title class="descriptionD3">
                   {{ selectedD3 && selectedD3.description }}</v-card-title

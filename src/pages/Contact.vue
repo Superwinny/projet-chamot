@@ -1,5 +1,7 @@
 <template>
   <div class="contact">
+    <span class="bg"></span>
+
     <v-row>
       <v-col cols="4"> </v-col>
       <v-col cols="4">
@@ -159,6 +161,16 @@ export default {
 .contact {
   margin-top: 100px;
   margin-bottom: 100px;
-  background-image:"/img/Illustration/Geneve.png",
+  /* background-image: "/img/Illustration/Geneve.png" no-repeat center center; */
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image:  ("/img/Illustration/Geneve.png" no-repeat center center);
+  background-size: cover;
+  transform: scale(1.1);
 }
 </style>

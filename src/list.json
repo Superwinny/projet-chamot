@@ -3,9 +3,9 @@
         {
             "nomProjet": "Skull of Love",
             "id": 0,
-            "description": "ahahahha",
-            "date": "10.10.10",
-            "entreprise": "Freelance",
+            "description": "",
+            "date": "",
+            "entreprise": "",
             "format": "20x20",
             "imgPrincipal": "/img/Illustration/Skull_of_love.jpg"
         },
@@ -59,9 +59,9 @@
         {
             "nomProjet": "American Tourister",
             "id": 0,
-            "description": "",
-            "date": "",
-            "entreprise": "",
+            "description": "J’ai eu l’honneur de créer un concept visuel afin de promouvoir la marque Amercian Tourister, une branche de la marque Samsonite. Après une analyse de la marchandise, de la clientèle cible,  et de leur identité visuelle, les mots COLORÉ, DYNAMIQUE, JEUNE et MODERNE sont ressortis. J’ai alors transmis l’identité de la marque par un merchandising en bloc et une scénographie étonnante, qui à ensuite été reprise notamment au Danemark et en Autriche. En collaboration avec la responsable marketing, nous avons mis en place un concours permettant au gagnant de partir en voyage avec une de ses valises. Le résultat ? Des clients qui s’extasent et qui s’arrêtent devant un mannequin suspendu surrfant sur une valise et cette explostion de couleurs. Cela a généré un bénéfice bien supérieur au prévision: +30% de chiffre d'affaire.",
+            "date": "Janvier 2017",
+            "entreprise": "Manor",
             "format": "",
             "imgPrincipal": "/img/3D/AmericanTourister/FullSizeRender21.jpg",
             "imgSecondaire": [
@@ -73,9 +73,9 @@
         {
             "nomProjet": "Beach",
             "id": 1,
-            "description": "",
-            "date": "",
-            "entreprise": "",
+            "description": "Ce projet à été mon travail pratique de CFC. Mandatée pour créer et mettre en place un concept pour mettre en avant la promotion «BEACH», mon objectif était de mettre en avant les produits par un merchandising de qualité permettant un impact visuel compétant et séduisant. Le but étant de favoriser l’acte d’achat, il était judicieux d’utiliser un merchandising de séduction afin de créer de l’émotion chez le client. Pour provoquer le coup de coeur et insiter le client à l’acte d’achat, il faut qu’il puisse s’identifier au produit, au style et à l’ambiance générale de la promotion. Pour cela il était nécessaire de faire appel aux 5 sens : la vue, l’odorat, le toucher, l’ouïe et le goût.Ce projet m'a valu le prix du meilleur Travail Pratique Individuel en Polydesign de Suisse Romande pour la volée 2017, avec une note de 5,3.",
+            "date": "Mai 2017",
+            "entreprise": "Manor",
             "format": "",
             "imgPrincipal": "/img/3D/Beach/FullSizeRender 3.jpg",
             "imgSecondaire": [
@@ -83,13 +83,12 @@
                 "/img/3D/Beach/FullSizeRender 2.jpg",
                 "/img/3D/Beach/FullSizeRender 4.jpg",
                 "/img/3D/Beach/FullSizeRender 5.jpg"
-
             ]
         },
         {
             "nomProjet": "Beauty",
             "id": 2,
-            "description": "ahahahhahahah",
+            "description": "",
             "date": "",
             "entreprise": "",
             "format": "",
@@ -132,9 +131,9 @@
         {
             "nomProjet": "CGR Avocat",
             "id": 2,
-            "description": "ahahahhaahha",
+            "description": "Création d'identitée visuelle pour une étude d'avocat à Genève",
             "date": "",
-            "entreprise": "",
+            "entreprise": "CGR Avocat",
             "format": "",
             "imgPrincipal": "/img/2D/CGR/Logo.png    ",
             "imgSecondaire": [

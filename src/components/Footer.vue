@@ -5,7 +5,8 @@
       flat
       tile
       class=" white--text text-center"
-      dark
+      color="rgb( 29  29  27)"
+
     >
       <v-card-text>
         <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
