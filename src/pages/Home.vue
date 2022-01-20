@@ -5,7 +5,7 @@
         <v-card class="mx-auto" max-width="auto">
           <v-img
             src="/img/LogoPhoto/Homephoto.jpeg"
-            height="700px"
+            height="500px"
             width="auto"
           ></v-img>
         </v-card>

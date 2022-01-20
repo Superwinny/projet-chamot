@@ -171,7 +171,7 @@ export default {
   background-image: url("/img/Illustration/Geneve.png");
   background-size: cover;
   background-position: center; /* Center the image */
-  opacity: 20%;
+  opacity: 40%;
   transform: scale(1.1);
 }
 </style>

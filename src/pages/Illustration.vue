@@ -26,9 +26,12 @@
         max-width="50%"
         @click:outside="hideDialog()"
         @keydown.esc="hideDialog()"
-        class="dialog"
+        :fullscreen="
+          this.$vuetify.breakpoint.name === 'xs' ||
+          this.$vuetify.breakpoint.name === 'sm'
+        "
         dark
-        >
+      >
         <v-card max-width="auto">
           <v-card-text>
             <v-container>
@@ -50,15 +53,12 @@
                     }}</v-card-title
                   >
                   <v-card-title> </v-card-title>
-                  <!-- <v-card-title>
-                    {{
-                      selectedIllustration && selectedIllustration.description
-                    }}</v-card-title
-                  > -->
-                   <v-card-title>
+
+                  <v-card-title>
                     {{
                       selectedIllustration && selectedIllustration.entreprise
-                    }} {{
+                    }}
+                    {{
                       selectedIllustration && selectedIllustration.date
                     }}</v-card-title
                   >
@@ -86,7 +86,7 @@
                       :rules="nameRules"
                       label="Name"
                       required
-                       placeholder="Name"
+                      placeholder="Name"
                       color="deep-purple"
                     ></v-text-field>
                     <v-text-field
@@ -95,7 +95,7 @@
                       :rules="lastnameRules"
                       label="LastName"
                       required
-                       placeholder="LastName"
+                      placeholder="LastName"
                       color="deep-purple"
                     ></v-text-field>
 
@@ -104,7 +104,7 @@
                       :rules="emailRules"
                       label="E-mail"
                       required
-                       placeholder="E-mail"
+                      placeholder="E-mail"
                       color="deep-purple"
                     ></v-text-field>
 
@@ -178,7 +178,7 @@ export default {
       format: [
         {
           name: "20x20",
-          price: "24CHF"
+          price: "24CHF",
         },
         {
           name: "30x40",
@@ -258,11 +258,6 @@ export default {
 </script>
 
 <style>
-.dialog{
-  border-block-color: red ;
-}
-
-
 .margin-illustration {
   margin-top: 250px;
   margin-bottom: 250px;
@@ -271,7 +266,7 @@ export default {
 .format {
   margin: auto;
 }
-.img-illustration{
+.img-illustration {
   border-radius: 25px;
   margin-top: 20px;
 }

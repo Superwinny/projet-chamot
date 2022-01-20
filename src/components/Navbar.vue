@@ -75,9 +75,6 @@ export default {
 </script>
 
 <style>
-/* .rounded-image {
-  border-radius: 50%; 
-  filter: brightness(2);} */
 
 .color {
   color: rgba(169, 71, 27);
