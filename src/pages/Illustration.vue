@@ -6,8 +6,10 @@
         <v-card class="mx-auto" max-width="auto">
           <v-img
             :src="list.imgPrincipal"
-            height="300px"
             width="auto"
+            height="300px"
+            contain
+            class="align-center"
             @click="selectIllustration(list)"
           ></v-img>
 
@@ -272,5 +274,10 @@ export default {
 .img-illustration{
   border-radius: 25px;
   margin-top: 20px;
+}
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 </style>

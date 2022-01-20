@@ -169,8 +169,10 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background-image:  ("/img/Illustration/Geneve.png" no-repeat center center);
+  background-image: url("/img/Illustration/Geneve.png");
   background-size: cover;
+  background-position: center; /* Center the image */
+  opacity: 20%;
   transform: scale(1.1);
 }
 </style>
