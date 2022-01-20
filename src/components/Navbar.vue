@@ -16,7 +16,7 @@
             class="rounded-image"
             height="100"
             width="150"
-            src="/img/LogoPhoto/Logo_lola_orange.png"
+            src="/img/LogoPhoto/Logo_lola_noir.png"
           />
         </v-col>
       </v-row>
@@ -25,7 +25,7 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn icon to="/" v-bind="attrs" v-on="on">
-                <v-icon>mdi-home</v-icon>
+                <v-icon >mdi-home</v-icon>
               </v-btn>
             </template>
             <span>Home</span>
@@ -33,7 +33,7 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn icon to="/illustration" v-bind="attrs" v-on="on">
-                <v-icon>mdi-image-outline</v-icon>
+                <v-icon >mdi-image-outline</v-icon>
               </v-btn>
             </template>
             <span>Illustration</span>
@@ -75,11 +75,14 @@ export default {
 </script>
 
 <style>
-.rounded-image {
-  /* border-radius: 50%; */
-  filter: brightness(2);}
+/* .rounded-image {
+  border-radius: 50%; 
+  filter: brightness(2);} */
 
 .color {
   color: rgba(169, 71, 27);
+}
+.icon{
+  color: black;
 }
 </style>

@@ -88,9 +88,9 @@
         {
             "nomProjet": "Beauty",
             "id": 2,
-            "description": "",
-            "date": "",
-            "entreprise": "",
+            "description": "Création du concept pour la promotion des produits de beauté à Manor Genève. J'ai conceptualisé, préparé et mené à bien la construction d'un mur décoratif à l'entrée Cornavin.",
+            "date": "Septembre 2016",
+            "entreprise": "Manor",
             "format": "",
             "imgPrincipal": "/img/3D/Beauty/FullSizeRender10.jpg",
             "imgSecondaire": [
@@ -105,9 +105,9 @@
         {
             "nomProjet": "White Oak",
             "id": 0,
-            "description": "ahahahhaahha",
-            "date": "",
-            "entreprise": "",
+            "description": "Création d'identité visuelle pour une acrade d'onglerie: logo, carte de visite, vitrine.",
+            "date": "Aout 2019",
+            "entreprise": "Freelance",
             "format": "",
             "imgPrincipal": "/img/2D/WhiteOak/Cartevisite.png    ",
             "imgSecondaire": [
@@ -119,9 +119,9 @@
         {
             "nomProjet": "Collection éditoriale",
             "id": 1,
-            "description": "ahahahhaahha",
-            "date": "",
-            "entreprise": "",
+            "description": "Projet de création de couverture d'une série de livre d'Arto Passilina.",
+            "date": "Décembre 2021",
+            "entreprise": "Design & Formation",
             "format": "",
             "imgPrincipal": "/img/2D/Collectioneditoriale/Collection_editoriale.png    ",
             "imgSecondaire": [
@@ -132,7 +132,7 @@
             "nomProjet": "CGR Avocat",
             "id": 2,
             "description": "Création d'identitée visuelle pour une étude d'avocat à Genève",
-            "date": "",
+            "date": "Novembre 2019",
             "entreprise": "CGR Avocat",
             "format": "",
             "imgPrincipal": "/img/2D/CGR/Logo.png    ",
