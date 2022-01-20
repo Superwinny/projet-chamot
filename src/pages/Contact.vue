@@ -161,7 +161,6 @@ export default {
 .contact {
   margin-top: 100px;
   margin-bottom: 100px;
-  /* background-image: "/img/Illustration/Geneve.png" no-repeat center center; */
 }
 .bg {
   width: 100%;
