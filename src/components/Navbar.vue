@@ -1,8 +1,7 @@
 <template>
   <v-app-bar
-    class="indigo lighten-1 white--text text-center"
+    color="rgb( 169  71  34)"
     dense
-    dark
     :height="this.$route.name === 'Home' ? '600px' : '250px'"
     :absolute="this.$route.name === 'Home'"
     :hide-on-scroll="this.$route.name === 'Home'"
@@ -13,11 +12,11 @@
       <v-row align="center" justify="center" class="text-center">
         <v-col cols="12">
           <img
+           
             class="rounded-image"
             height="150"
             width="150"
-            src="/img/Logo_lola"
-
+            src="/LogoPhoto/Logo_lola_orange.png"
           />
         </v-col>
       </v-row>
@@ -78,5 +77,8 @@ export default {
 <style>
 .rounded-image {
   border-radius: 50%;
+  filter: brightness(2);}
+.color {
+  color: rgba(169, 71, 27);
 }
 </style>

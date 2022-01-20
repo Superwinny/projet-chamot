@@ -4,7 +4,7 @@
       <v-col cols="12" md="4">
         <v-card class="mx-auto" max-width="auto">
           <v-img
-            src="/img/1Y1A0615.jpeg"
+            src="/LogoPhoto/Homephoto.jpeg"
             height="700px"
             width="auto"
           ></v-img>

@@ -159,6 +159,6 @@ export default {
 .contact {
   margin-top: 100px;
   margin-bottom: 100px;
-  background-image:"/img/Illustration/Geneve.png"
+  background-image:"/img/Illustration/Geneve.png",
 }
 </style>

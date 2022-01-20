@@ -1,22 +1,14 @@
 <template>
-  <v-footer
-    dark
-    padless
-     
-  >
+  <v-footer  padless>
     <v-card
       width="100%"
       flat
       tile
-      class="indigo lighten-1 white--text text-center"
+      class=" white--text text-center"
+      dark
     >
       <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 white--text"
-          icon
-        >
+        <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
           <v-icon size="24px">
             {{ icon }}
           </v-icon>
@@ -31,15 +23,12 @@
   </v-footer>
 </template>
 <script>
-  export default {
-      name:"Footer",
-    data: () => ({
-      icons: [
-        'mdi-instagram',
-      ],
-    }),
-  }
+export default {
+  name: "Footer",
+  data: () => ({
+    icons: ["mdi-instagram"],
+  }),
+};
 </script>
 <style scoped>
-
 </style>

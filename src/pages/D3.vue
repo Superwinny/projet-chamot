@@ -48,7 +48,7 @@
                 </v-carousel>
               </v-col>
               <v-col cols="12">
-                                <v-card-title class="descriptionD3">
+                <v-card-title class="descriptionD3">
                   {{ selectedD3 && selectedD3.nomProjet }}</v-card-title
                 >
                 <v-card-title class="descriptionD3">
